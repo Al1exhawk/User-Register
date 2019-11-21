@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+$form-width: 20rem;
+$user-item-width: 15rem;
+
+.App {
+  height: 100vh;
+}
+
+.header {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+  li {
+    list-style: none;
+    display: inline;
+    margin: 0 0.5rem;
+    padding: 0.3rem;
+  }
+}
+
+.userForm {
+  width: $form-width;
+  margin: auto;
+  background-color: #09d3ac;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: 600px) {
+    width: 15rem;
+  }
+  button {
+    padding: 0.5rem;
+    background-color: red;
+    width: fit-content;
+  }
+
+  .errorMessage {
+    color: red;
+    font-size: larger;
+  }
+}
+
+.items-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: cyan;
+  height: 100%;
+  .user-item {
+    width: $user-item-width;
+    height: fit-content;
+    background-color: yellow;
+    margin-left: 2rem;
+  }
+}
